@@ -2,6 +2,7 @@ import { View, Text, ScrollView } from 'react-native'
 import React from 'react'
 import { ArrowRightIcon } from 'react-native-heroicons/outline'
 import RestaurantCard from './RestaurantCard'
+import { localRestaurants } from '../assets/RestaurantList'
 
 interface Props {
   id: string
@@ -27,42 +28,21 @@ const FeaturedRow = ({ id, title, description, featuredCategory }: Props) => {
         className='pt-4'
       >
         {/* Restaurant Card */}
-        <RestaurantCard
-          id='123'
-          imgUrl={imageUrl1}
-          title='Sushi'
-          rating={4.5}
-          genre='Japanese'
-          address='M.shyri'
-          short_description='short descriptoon'
-          dishes='sushi'
-          long={42.42}
-          lat={43.43}
-        />
-        <RestaurantCard
-          id='123'
-          imgUrl={imageUrl1}
-          title='Sushi'
-          rating={4.5}
-          genre='Japanese'
-          address='M.shyri'
-          short_description='short descriptoon'
-          dishes='sushi'
-          long={42.42}
-          lat={43.43}
-        />
-        <RestaurantCard
-          id='123'
-          imgUrl={imageUrl1}
-          title='Sushi'
-          rating={4.5}
-          genre='Japanese'
-          address='M.shyri'
-          short_description='short descriptoon'
-          dishes='sushi'
-          long={42.42}
-          lat={43.43}
-        />
+        {localRestaurants.map((item) => (
+          <RestaurantCard
+            key={item.id}
+            id={item.id}
+            title={item.title}
+            imgUrl={item.imgUrl}
+            rating={item.rating}
+            genre={item.genre}
+            address={item.address}
+            short_description={item.short_description}
+            dishes=''
+            long={item.long}
+            lat={item.lat}
+          />
+        ))}
       </ScrollView>
     </View>
   )

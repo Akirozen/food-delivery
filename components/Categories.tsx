@@ -1,4 +1,4 @@
-import { ScrollView } from 'react-native'
+import { View, Text, ScrollView } from 'react-native'
 import { foods } from '../assets/RestaurantList'
 import CategoryCard from './CategoryCard'
 
@@ -14,7 +14,12 @@ const Categories = () => {
     >
       {/* Category card */}
       {foods.map((food) => (
-        <CategoryCard imgUrl={food.image} title={food.title} />
+        <CategoryCard
+          key={food.id}
+          imgUrl={food.image}
+          title={food.title}
+          id={food.id}
+        />
       ))}
     </ScrollView>
   )
