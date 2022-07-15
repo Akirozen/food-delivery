@@ -1,3 +1,10 @@
+export interface IDishes {
+  id: string
+  title: string
+  description: string
+  price: string
+  image: string
+}
 export interface IRestaurant {
   id: string
   imgUrl: string
@@ -6,7 +13,7 @@ export interface IRestaurant {
   genre: string
   address: string
   short_description: string
-  dishes: string[] //!!!!
+  dishes: IDishes[] //!!!!
   long: number
   lat: number
 }

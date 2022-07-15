@@ -5,7 +5,7 @@ import {
   useNavigation,
   useRoute,
 } from '@react-navigation/native'
-import { ParamList } from '../models/types'
+import { IDishes, ParamList } from '../models/types'
 import { useLayoutEffect } from 'react'
 import { ArrowLeftIcon } from 'react-native-heroicons/outline'
 import {
@@ -38,7 +38,7 @@ const RestaurantScreen = () => {
       headerShown: false,
     })
   }, [])
-
+  console.log('dishes', dishes)
   return (
     <ScrollView>
       <View className='relative'>
@@ -91,7 +91,7 @@ const RestaurantScreen = () => {
       <View>
         <Text className='px-4 pt-6 mb-3 font-bold'>Menu</Text>
         {/* Dishes  */}
-        {dishes.map((dish: string, index: number) => (
+        {dishes.map((dish: IDishes) => (
           // <Text>{dish}</Text>
           <DishRow dish={dish} />
         ))}

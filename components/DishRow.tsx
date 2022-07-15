@@ -4,7 +4,7 @@ import React from 'react'
 const DishRow = ({ dish }: any) => {
   return (
     <View>
-      <Text className='my-2 font-bold'>{dish}</Text>
+      <Text className='my-2 font-bold'>{dish.title}</Text>
     </View>
   )
 }
