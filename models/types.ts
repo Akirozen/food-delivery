@@ -6,7 +6,7 @@ export interface IRestaurant {
   genre: string
   address: string
   short_description: string
-  dishes: string //!!!!
+  dishes: string[] //!!!!
   long: number
   lat: number
 }

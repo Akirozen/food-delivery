@@ -38,7 +38,7 @@ const FeaturedRow = ({ id, title, description, featuredCategory }: Props) => {
             genre={item.genre}
             address={item.address}
             short_description={item.short_description}
-            dishes=''
+            dishes={item.dishes}
             long={item.long}
             lat={item.lat}
           />
