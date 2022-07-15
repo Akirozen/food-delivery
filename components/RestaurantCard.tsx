@@ -1,18 +1,10 @@
 import { View, Text, TouchableOpacity, Image } from 'react-native'
 import { StarIcon } from 'react-native-heroicons/solid'
 import { LocationMarkerIcon } from 'react-native-heroicons/outline'
-interface Props {
-  id: string
-  imgUrl: string
-  title: string
-  rating: number
-  genre: string
-  address: string
-  short_description: string
-  dishes: string //!!!!
-  long: number
-  lat: number
-}
+import { useNavigation } from '@react-navigation/native'
+import { NativeStackNavigationProp } from '@react-navigation/native-stack'
+import { IRestaurant, RootStackParamList } from '../models/types'
+
 const RestaurantCard = ({
   id,
   imgUrl,
@@ -24,9 +16,25 @@ const RestaurantCard = ({
   dishes,
   long,
   lat,
-}: Props) => {
+}: IRestaurant) => {
+  const navigation =
+    useNavigation<NativeStackNavigationProp<RootStackParamList>>()
   return (
     <TouchableOpacity
+      onPress={() => {
+        navigation.navigate('Restaurant', {
+          id,
+          imgUrl,
+          title,
+          rating,
+          genre,
+          address,
+          short_description,
+          dishes,
+          long,
+          lat,
+        })
+      }}
       //@ts-ignore
       className='bg-white mr-3 shadow'
     >
