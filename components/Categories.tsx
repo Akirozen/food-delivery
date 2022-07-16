@@ -1,4 +1,4 @@
-import { View, Text, ScrollView } from 'react-native'
+import { ScrollView } from 'react-native'
 import { foods } from '../assets/RestaurantList'
 import CategoryCard from './CategoryCard'
 

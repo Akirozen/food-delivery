@@ -92,7 +92,7 @@ const RestaurantScreen = () => {
         {/* Dishes  */}
         {dishes.map((dish: IDishes) => (
           // <Text>{dish}</Text>
-          <DishRow dish={dish} />
+          <DishRow key={dish.id} dish={dish} />
         ))}
       </View>
     </ScrollView>
