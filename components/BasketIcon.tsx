@@ -11,10 +11,13 @@ const BasketIcon = () => {
   const navigation = useNavigation()
   const items = useSelector(selectBasketItems)
   const basketTotal = useSelector(selectBasketTotal)
-  console.log('basketTotal', basketTotal)
+
+  if (items.length === 0) return null
+
   return (
     <View className='absolute bottom-10 w-full z-50'>
       <TouchableOpacity
+        onPress={() => navigation.navigate('Basket')}
         //@ts-ignore
         className='mx-5 bg-[#0cb] p-4 rounded-lg flex-row items-center space-x-1'
       >

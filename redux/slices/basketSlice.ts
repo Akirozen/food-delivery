@@ -39,7 +39,6 @@ export const selectBasketItemsWithId = (state: RootState, id: string) =>
 
 export const selectBasketTotal = (state: RootState) =>
   state.basket.items.reduce((total: number, item: IDishes) => {
-    console.log('item', item)
     return (total += item.price)
   }, 0)
 export default basketSlice.reducer

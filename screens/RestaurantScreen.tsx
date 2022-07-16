@@ -6,7 +6,7 @@ import {
   useRoute,
 } from '@react-navigation/native'
 import { IDishes, ParamList } from '../models/types'
-import { useLayoutEffect } from 'react'
+import { useEffect, useLayoutEffect } from 'react'
 import { ArrowLeftIcon } from 'react-native-heroicons/outline'
 import {
   ChevronRightIcon,
@@ -16,9 +16,12 @@ import {
 } from 'react-native-heroicons/solid'
 import DishRow from '../components/DishRow'
 import BasketIcon from '../components/BasketIcon'
+import { useDispatch } from 'react-redux'
+import { setRestaurant } from '../redux/slices/restaurantSlice'
 
 const RestaurantScreen = () => {
   const navigation = useNavigation()
+  const dispatch = useDispatch()
   const route = useRoute<RouteProp<ParamList, 'RestaurantParams'>>()
   const {
     params: {
@@ -34,6 +37,24 @@ const RestaurantScreen = () => {
       lat,
     },
   } = route
+
+  useEffect(() => {
+    dispatch(
+      setRestaurant({
+        id,
+        imgUrl,
+        title,
+        rating,
+        genre,
+        address,
+        short_description,
+        dishes,
+        long,
+        lat,
+      })
+    )
+  }, [dispatch])
+
   useLayoutEffect(() => {
     navigation.setOptions({
       headerShown: false,
