@@ -76,7 +76,8 @@ export const localRestaurants = [
     rating: 4.2,
     genre: 'Qofte',
     address: 'Liqeni',
-    short_description: 'lorem lorem lorem',
+    short_description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad amet vitae, dignissimos doloribus labore adipisci corrupti dolor cumque ea cupiditate quae asperiores laborum.',
     dishes: foods,
     long: 42.0245,
     lat: 45.23654,
@@ -89,7 +90,8 @@ export const localRestaurants = [
     rating: 4.2,
     genre: 'Tasqebap',
     address: 'Ing Ndertimit',
-    short_description: 'lorem lorem lorem',
+    short_description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad amet vitae, dignissimos doloribus labore adipisci corrupti dolor cumque ea cupiditate quae asperiores laborum.',
     dishes: foods,
     long: 42.0245,
     lat: 45.23654,
@@ -102,7 +104,8 @@ export const localRestaurants = [
     rating: 4.2,
     genre: 'Pilaf',
     address: '21 Dhjetori',
-    short_description: 'lorem lorem lorem',
+    short_description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad amet vitae, dignissimos doloribus labore adipisci corrupti dolor cumque ea cupiditate quae asperiores laborum.',
     dishes: foods,
     long: 42.0245,
     lat: 45.23654,
@@ -115,7 +118,8 @@ export const localRestaurants = [
     rating: 4.2,
     genre: 'Byrek',
     address: 'Tajvani',
-    short_description: 'lorem lorem lorem',
+    short_description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad amet vitae, dignissimos doloribus labore adipisci corrupti dolor cumque ea cupiditate quae asperiores laborum.',
     dishes: foods,
     long: 42.0245,
     lat: 45.23654,

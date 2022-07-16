@@ -13,7 +13,7 @@ export interface IRestaurant {
   genre: string
   address: string
   short_description: string
-  dishes: IDishes[] //!!!!
+  dishes: IDishes[]
   long: number
   lat: number
 }

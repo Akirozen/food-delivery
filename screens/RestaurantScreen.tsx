@@ -38,7 +38,6 @@ const RestaurantScreen = () => {
       headerShown: false,
     })
   }, [])
-  console.log('dishes', dishes)
   return (
     <ScrollView>
       <View className='relative'>
