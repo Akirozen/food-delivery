@@ -1,4 +1,4 @@
-import { View, Text, Image, TouchableOpacity } from 'react-native'
+import { Text, Image, TouchableOpacity } from 'react-native'
 
 interface Props {
   id: string
@@ -6,7 +6,7 @@ interface Props {
   title: string
 }
 
-const CategoryCard = ({ id, imgUrl, title }: Props) => {
+const CategoryCard = ({ imgUrl, title }: Props) => {
   return (
     <TouchableOpacity
       // @ts-ignore

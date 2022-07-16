@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { IDishes, IRestaurant } from '../../models/types'
+import { IRestaurant } from '../../models/types'
 import { RootState } from '../store/store'
 
 export interface RestaurantSlice {

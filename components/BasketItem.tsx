@@ -1,21 +1,12 @@
 import React from 'react'
 import CurrencyFormat from 'react-currency-format'
 import { Image, Text, TouchableOpacity, View } from 'react-native'
-export function BasketItem({
-  key,
-  items,
-  length,
-  image,
-  title,
-  value,
-  dispatch,
-  removeFromBasket,
-}: any) {
-  console.log('key', key)
+
+export function BasketItem({ key, items, dispatch, removeFromBasket }: any) {
   return (
     <View
       key={key}
-      className='flex-row items-center space-x-3 bg-white py-2 px-5'
+      className='flex-row items-center space-x-3 bg-white py-2 px-5 border-b border-gray-200'
     >
       <Text className='text-[#0cb]'>{items?.length} x</Text>
       <Image

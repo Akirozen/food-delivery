@@ -1,8 +1,7 @@
-import React from 'react'
-import CurrencyFormat from 'react-currency-format'
 import { Text, TouchableOpacity, View } from 'react-native'
+import CurrencyFormat from 'react-currency-format'
 
-export function PlaceOrder({ basketTotal, value }: any) {
+export function PlaceOrder({ basketTotal }: any) {
   return (
     <View className='p-5 mt-5 bg-white space-y-4'>
       <View className='flex-row justify-between'>

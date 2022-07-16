@@ -1,8 +1,8 @@
 import { View, Text, TouchableOpacity, Image } from 'react-native'
-import { StarIcon } from 'react-native-heroicons/solid'
-import { LocationMarkerIcon } from 'react-native-heroicons/outline'
 import { useNavigation } from '@react-navigation/native'
 import { NativeStackNavigationProp } from '@react-navigation/native-stack'
+import { StarIcon } from 'react-native-heroicons/solid'
+import { LocationMarkerIcon } from 'react-native-heroicons/outline'
 import { IRestaurant, RootStackParamList } from '../models/types'
 
 const RestaurantCard = ({

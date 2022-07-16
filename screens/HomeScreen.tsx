@@ -1,3 +1,5 @@
+import React, { useLayoutEffect } from 'react'
+import { useNavigation } from '@react-navigation/native'
 import {
   Image,
   SafeAreaView,
@@ -13,10 +15,6 @@ import {
   SearchIcon,
   UserIcon,
 } from 'react-native-heroicons/outline'
-
-import React, { useLayoutEffect } from 'react'
-import { useNavigation } from '@react-navigation/native'
-import { ScreenContainer } from 'react-native-screens'
 import Categories from '../components/Categories'
 import FeaturedRow from '../components/FeaturedRow'
 

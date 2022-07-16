@@ -1,16 +1,15 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { View, Text, TouchableOpacity, Image } from 'react-native'
+import { MinusCircleIcon, PlusCircleIcon } from 'react-native-heroicons/solid'
+import { useDispatch, useSelector } from 'react-redux'
 import CurrencyFormat from 'react-currency-format'
 import { IDishes } from '../models/types'
-import { MinusCircleIcon, PlusCircleIcon } from 'react-native-heroicons/solid'
-import { Selector, useDispatch, useSelector } from 'react-redux'
+import { AppDispatch, RootState } from '../redux/store/store'
 import {
   addToBasket,
   removeFromBasket,
-  selectBasketItems,
   selectBasketItemsWithId,
 } from '../redux/slices/basketSlice'
-import { AppDispatch, RootState } from '../redux/store/store'
 
 interface Props {
   dish: IDishes
@@ -70,7 +69,6 @@ const DishRow = ({ dish }: Props) => {
               <MinusCircleIcon
                 onPress={removeItemFromBasket}
                 size={40}
-                // color='#0cb'
                 color={items.length > 0 ? '#0cb' : 'gray'}
               />
             </TouchableOpacity>

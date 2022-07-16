@@ -1,19 +1,15 @@
+import { useEffect, useState } from 'react'
 import { View, Text, TouchableOpacity, Image, ScrollView } from 'react-native'
+import { SafeAreaView } from 'react-native-safe-area-context'
 import { useNavigation } from '@react-navigation/native'
 import { useDispatch, useSelector } from 'react-redux'
-import {
-  selectRestaurant,
-  setRestaurant,
-} from '../redux/slices/restaurantSlice'
+import { XCircleIcon } from 'react-native-heroicons/solid'
 import {
   removeFromBasket,
   selectBasketItems,
   selectBasketTotal,
 } from '../redux/slices/basketSlice'
-import { useEffect, useState } from 'react'
-import { SafeAreaView } from 'react-native-safe-area-context'
-import { XCircleIcon } from 'react-native-heroicons/solid'
-import CurrencyFormat from 'react-currency-format'
+import { selectRestaurant } from '../redux/slices/restaurantSlice'
 import { PlaceOrder } from '../components/PlaceOrder'
 import { BasketItem } from '../components/BasketItem'
 
@@ -33,9 +29,13 @@ const BasketScreen = () => {
     }, {})
 
     setItemsInBasket(groupedItems)
+    if (basketTotal === 0) {
+      return navigation.goBack()
+    }
   }, [items])
 
-  console.log('restaurant', itemsInBasket)
+  console.log('itemsInBasket', basketTotal)
+
   return (
     <SafeAreaView className='flex-1 bg-white'>
       <View className='flex-1 bg-gray-100'>
@@ -48,6 +48,7 @@ const BasketScreen = () => {
           </View>
 
           <TouchableOpacity
+            onPress={navigation.goBack}
             //@ts-ignore
             className='rounded-full bg-gray-100 absolute top-3 right-5'
           >
@@ -67,16 +68,12 @@ const BasketScreen = () => {
             <Text className='text-[#0cb]'>Change</Text>
           </TouchableOpacity>
         </View>
-
+        {/* Basket items */}
         <ScrollView className='divide-y divide-gray-200'>
           {Object.entries(itemsInBasket).map(([key, items]) => (
             <BasketItem
               key={key}
               items={items}
-              length={items.length}
-              image={items.image}
-              title={items.title}
-              value={items.value}
               dispatch={dispatch}
               removeFromBasket={removeFromBasket}
             />

@@ -1,12 +1,8 @@
-import { View, Text, ScrollView, Image, TouchableOpacity } from 'react-native'
-import {
-  NavigationProp,
-  RouteProp,
-  useNavigation,
-  useRoute,
-} from '@react-navigation/native'
-import { IDishes, ParamList } from '../models/types'
 import { useEffect, useLayoutEffect } from 'react'
+import { useDispatch } from 'react-redux'
+import { View, Text, ScrollView, Image, TouchableOpacity } from 'react-native'
+import { RouteProp, useNavigation, useRoute } from '@react-navigation/native'
+import { IDishes, ParamList } from '../models/types'
 import { ArrowLeftIcon } from 'react-native-heroicons/outline'
 import {
   ChevronRightIcon,
@@ -14,10 +10,9 @@ import {
   QuestionMarkCircleIcon,
   StarIcon,
 } from 'react-native-heroicons/solid'
+import { setRestaurant } from '../redux/slices/restaurantSlice'
 import DishRow from '../components/DishRow'
 import BasketIcon from '../components/BasketIcon'
-import { useDispatch } from 'react-redux'
-import { setRestaurant } from '../redux/slices/restaurantSlice'
 
 const RestaurantScreen = () => {
   const navigation = useNavigation()
