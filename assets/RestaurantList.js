@@ -3,7 +3,7 @@ export const foods = [
     id: '1',
     title: 'Lasagna',
     description: 'With butter lettuce, tomato and sauce bechamel',
-    price: '$13.50',
+    price: 13.5,
     image:
       'https://www.modernhoney.com/wp-content/uploads/2019/08/Classic-Lasagna-14-scaled.jpg',
   },
@@ -12,7 +12,7 @@ export const foods = [
     title: 'Tandoori Chicken',
     description:
       'Amazing Indian dish with tenderloin chicken off the sizzles 🔥',
-    price: '$19.20',
+    price: 19.2,
     image: 'https://i.ytimg.com/vi/BKxGodX9NGg/maxresdefault.jpg',
   },
   {
@@ -20,7 +20,7 @@ export const foods = [
     title: 'Chilaquiles',
     description:
       'Chilaquiles with cheese and sauce. A delicious mexican dish 🇲🇽',
-    price: '$14.50',
+    price: 14.5,
     image:
       'https://i2.wp.com/chilipeppermadness.com/wp-content/uploads/2020/11/Chilaquales-Recipe-Chilaquiles-Rojos-1.jpg',
   },
@@ -29,7 +29,7 @@ export const foods = [
     title: 'Chicken Caesar Salad',
     description:
       'One can never go wrong with a chicken caesar salad. Healthy option with greens and proteins!',
-    price: '$21.50',
+    price: 21.5,
     image:
       'https://images.themodernproper.com/billowy-turkey/production/posts/2019/Easy-italian-salad-recipe-10.jpg?w=1200&h=1200&q=82&fm=jpg&fit=crop&fp-x=0.5&fp-y=0.5&dm=1614096227&s=c0f63a30cef3334d97f9ecad14be51da',
   },
@@ -37,7 +37,7 @@ export const foods = [
     id: '5',
     title: 'Lasagna',
     description: 'With butter lettuce, tomato and sauce bechamel',
-    price: '$13.50',
+    price: 13.5,
     image:
       'https://thestayathomechef.com/wp-content/uploads/2017/08/Most-Amazing-Lasagna-2-e1574792735811.jpg',
   },
@@ -45,7 +45,7 @@ export const foods = [
     id: '6',
     title: 'Chicken Fillet',
     description: 'With butter lettuce, tomato and sauce bechamel',
-    price: '$13.50',
+    price: 13.5,
     image:
       'https://image.shutterstock.com/image-photo/chicken-fillet-salad-healthy-food-260nw-1721943142.jpg',
   },
@@ -53,7 +53,7 @@ export const foods = [
     id: '7',
     title: 'Beef Fillet',
     description: 'With butter lettuce, tomato and sauce bechamel',
-    price: '$13.50',
+    price: 13.5,
     image:
       'https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80',
   },
@@ -61,7 +61,7 @@ export const foods = [
     id: '8',
     title: 'Eggs on pan',
     description: 'With butter lettuce, tomato and sauce bechamel',
-    price: '$13.50',
+    price: 13.5,
     image:
       'https://2aj47i3u0emv3rfnwz2zoyfm-wpengine.netdna-ssl.com/wp-content/uploads/2017/09/foodiesfeed.jpg',
   },

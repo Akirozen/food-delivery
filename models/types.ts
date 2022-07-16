@@ -2,7 +2,7 @@ export interface IDishes {
   id: string
   title: string
   description: string
-  price: string
+  price: number
   image: string
 }
 export interface IRestaurant {
