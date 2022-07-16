@@ -26,7 +26,7 @@ export const restaurantSlice = createSlice({
   initialState,
   reducers: {
     setRestaurant: (state, action: any) => {
-      state.restaurant = action.payloads
+      state.restaurant = action.payload
     },
   },
 })
@@ -35,6 +35,7 @@ export const restaurantSlice = createSlice({
 export const { setRestaurant } = restaurantSlice.actions
 
 export const selectRestaurant = (state: RootState) =>
+  // console.log('state?.restaurant.restaurant', state?.restaurant.restaurant)
   state?.restaurant.restaurant
 
 export default restaurantSlice.reducer
