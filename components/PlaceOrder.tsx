@@ -1,7 +1,9 @@
 import { Text, TouchableOpacity, View } from 'react-native'
 import CurrencyFormat from 'react-currency-format'
+import { useNavigation } from '@react-navigation/native'
 
 export function PlaceOrder({ basketTotal }: any) {
+  const navigation = useNavigation()
   return (
     <View className='p-5 mt-5 bg-white space-y-4'>
       <View className='flex-row justify-between'>
@@ -37,7 +39,9 @@ export function PlaceOrder({ basketTotal }: any) {
           )}
         />
       </View>
-      <TouchableOpacity //@ts-ignore
+      <TouchableOpacity
+        onPress={() => navigation.navigate('PreparingOrder')}
+        //@ts-ignore
         className='rounded-lg bg-[#0cb] p-4'
       >
         <Text className='text-white font-extrabold text-center'>
